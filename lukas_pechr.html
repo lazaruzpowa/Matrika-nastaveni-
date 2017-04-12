@@ -1,0 +1,368 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="Author" content="Lukáš Pechr">
+  <title>Dokumentace - Nastavení matriky</title>
+  </head>
+  <body>
+    <nav>
+      <h3>Navigace: </h3>
+      <ul>
+        <li><a href="#uvod">Úvod</a></li>
+        <li><a href="#metodika">Metodika - Použité nástroje</a></li>
+        <li><a href="#obsah">Popis elementů a atributů</a></li>
+        <li><a href="#transf">Popis transformace</a></li>
+        <li><a href="#zaver">Závěr</a></li>
+      </ul>
+      <hr />
+    </nav>
+    <main>
+      <section id="uvod">
+        <article>
+          <header>
+            <h2>Úvod</h2>
+          </header>          
+          <p>
+          Pro tento semestrální projekt s tématikou - "Nastavení aplikace", jsem si okruh Nastavení Matriky. Toto téma jsem si zvolil z důvodu mé práce.
+          Pracuji jako IT support na UMC Prahy 16, tudíž v tomto okruhy pracuji skoro každodenně.</p>
+          <p>
+          Do XML dokumentu byly uloženy všechny konfigurace aplikace Matrika, jak různých knih, účtů, vazeb a základního nastavení.
+          </p> 
+        </article>
+      </section>
+      <section id="metodika">
+        <article>
+          <header>
+            <h2>Metodika</h2>
+          </header>
+          <h3>Využité programy</h3>
+          <p>
+            K vytvoření tohoto projektu jsem využil tyto programy    
+          </p>
+          <table border="1" id="programy" title="Tabulka programů">
+            <tr>
+              <td>Název programu</td>
+              <td>Popis programu</td>
+              <td>URL</td>
+            </tr>
+            <tr>
+              <td>Sublime Text</td>
+              <td>Editor XML,XSD,...</td>
+              <td><a href="https://www.sublimetext.com/">Sublime Text</a></td>
+            </tr>
+            <tr>
+              <td>Safari</td>
+              <td>Internetový prohlížeč</td>
+              <td><a href="https://www.apple.com/safari/">Safari</a></td>
+            </tr>
+            <tr>
+              <td>GitHub</td>
+              <td>Pomoc při tvorbě kódů</td>
+              <td><a href="https://github.com">GitHub</a></td>
+            </tr>
+          </table>
+
+          <h3>Fóra či webové stránky</h3>
+          </p>
+          <table border="1" id="webovky" title="Tabulka webů">
+            <tr>
+              <td>Název webu</td>
+              <td>Popis webu</td>
+              <td>URL</td>
+            </tr>
+            <tr>
+              <td>w3schools</td>
+              <td>Informační portál o kódování</td>
+              <td><a href="https://www.w3schools.com/">w3school</a></td>
+            </tr>
+            <tr>
+              <td>W3 validator</td>
+              <td>Ivalidátor kódů</td>
+              <td><a href="https://validator.w3.org/">Validator</a></td>
+            </tr>
+          </table>       
+        </article>
+      </section>
+      <section id="obsah" >
+        <article>
+          <header>
+            <h2>Popis elementů a atributů</h2>
+          </header>
+          <h3>Použité elementy</h3>
+          <table border="1" id="elementy" title="Tabulka elementů">
+            <tr>
+              <td>Název elementu</td>
+              <td>Popis elementu</td>
+              <td>Schématické omezení</td>
+            </tr>
+            <tr>                       
+              <td>obecne-n</td>
+              <td>Vnější obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>nazev-modulu</td>
+              <td>Určuje jak se bude daný modul jmenovat</td>
+              <td>String (bez omezení)</td>
+            </tr> 
+            <tr>                       
+              <td>obec</td>
+              <td>Pro jakou obec je daný modul zaměřen</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>okres</td>
+              <td>Pro jaký okres je daný modul zaměřen</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>statni-obcanstvi</td>
+              <td>Nastavení defaultního státního občanství při novém záznamu</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>cislo-AIS</td>
+              <td>Přidělené číslo AIS úřadu</td>
+              <td>Rozmezí mezi 0 a 999</td>
+            </tr>
+            <tr>                       
+              <td>ciselnik-EOSQL</td>
+              <td>Informace zda modul má používat EOSSQL</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>                       
+              <td>vyber-EO</td>
+              <td>Informace zda modul má používat EO</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>                       
+              <td>tiskove-n</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>kniha-narozeni</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr> 
+            <tr>                       
+              <td>kniha-umrti</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>kniha-manzelstvi</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>nazev-knihy</td>
+              <td>Text pod kterým se kniha bude zobrazovat v nabídce</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>pocet-radku</td>
+              <td>Počet řádků které se budou tisknout pod podpisem</td>
+              <td>Integer (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>podpis</td>
+              <td>Název certifikátu který má aplikace hledat</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>obdobi</td>
+              <td>Rok pro který daná kniha platí</td>
+              <td>Integer (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>z-proskrtnuti</td>
+              <td>Znak který bude sloužit k proškrtávání</td>
+              <td>výber (*, +, /, ^, x, X)</td>
+            </tr>
+            <tr>                       
+              <td>n-vyhledavani</td>
+              <td>Obalová proměna</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>filtr</td>
+              <td>Filtrovaný textový řetězec</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>serazeni</td>
+              <td>Nastavení zdali sestupně nebo vzestupně</td>
+              <td>Sestupně, vzestupně</td>
+            </tr>
+            <tr>                       
+              <td>pocet-nalezu</td>
+              <td>Určuje kolik nálezů má být na jedné stránce</td>
+              <td>Integer (Bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>barevny-filtr</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>umrti</td>
+              <td>Zvolení barevného filtru pro daný záznam</td>
+              <td>Červená, žlutá, modrá, zelená, růžová, fialová</td>
+            </tr>
+            <tr>                       
+              <td>narozeni</td>
+              <td>Zvolení barevného filtru pro daný záznam</td>
+              <td>Červená, žlutá, modrá, zelená, růžová, fialová</td>
+            </tr>
+            <tr>                       
+              <td>snatek</td>
+              <td>Zvolení barevného filtru pro daný záznam</td>
+              <td>Červená, žlutá, modrá, zelená, růžová, fialová</td>
+            </tr>
+            <tr>                       
+              <td>n-uzivatele</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>jmeno</td>
+              <td>Zadání jména uživatele</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>prijmeni</td>
+              <td>Zadání příjmení uživatele</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>pozice</td>
+              <td>Zadání pracovní pozice uživatele</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>cert</td>
+              <td>Zadání certifikátu uživatele</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>zkratka</td>
+              <td>Zkratka uživatele</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>urad</td>
+              <td>Jméno úřadu na kterém pracovník pracuje</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>sitove-n</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>triada-web</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>url</td>
+              <td>URL na které se má aplikace připojovat</td>
+              <td>URL</td>
+            </tr>
+            <tr>                       
+              <td>login</td>
+              <td>Login pod kterým se aplikace přihlašuje</td>
+              <td>String (bez omezení)</td>
+            </tr>
+            <tr>                       
+              <td>ssl</td>
+              <td>Informace zda se má aplikace připojovat pomocí SSL</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>                       
+              <td>vazby</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>spoluprace</td>
+              <td>Obalová proměná</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>munis</td>
+              <td>Zda si má aplikace sehrávat data s aplikací MUNIS</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>                       
+              <td>ginis</td>
+              <td>Zda si má aplikace sehrávat data s aplikací GINIS</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>                       
+              <td>czechpoint</td>
+              <td>Zda si má aplikace sehrávat data s aplikací CZECHPOINT</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>                       
+              <td>vita</td>
+              <td>Zda si má aplikace sehrávat data s aplikací VITA</td>
+              <td>0, 1</td>
+            </tr>                                     
+          </table>
+          <h3>Použité atributy</h3>
+          <table border="1" id="atributy" title="Tabulka atributů">
+            <tr>
+              <td>Název atributu</td>
+              <td>Popis atributu</td>
+            </tr>
+            <tr>                       
+              <td>nazev</td>
+              <td>Obsahuje popisný název nastavení</td>
+            </tr> 
+            <tr>                       
+              <td>narozeni-c</td>
+              <td>Určuje číslo dané knihy narození</td>
+            </tr>
+            <tr>                       
+              <td>manzelstvi-c</td>
+              <td>Určuje číslo dané knihy manželství</td>
+            </tr>
+            <tr>                       
+              <td>umrti-c</td>
+              <td>Určuje číslo dané knihy úmrtí</td>
+            </tr>
+            <tr>                       
+              <td>spoj</td>
+              <td>Určuje číslo daného tabu spojů</td>
+            </tr>                    
+          </table>
+        </article>
+      </section>
+      <section id="transf">
+        <article>
+          <header>
+            <h2>Popis transformace</h2>
+          </header>
+          <p>Pomocí transformačního cyklu <code>for-each</code> vybere, a pomocí <strong>JSON</strong> odešle informace o všech knihách narození, které mají identifikační číslo větší jak 2. Všechny informace seřadí podle názvu knihy, a záznam bude obsahovat Název knihy, Validní období, Počt řádků pod podpisem, Znak pro proškrtnutí, Podpisový certifikát a Číslo knihy. Dále obsahuje testovací řetězec zda je údaj poslední, a případné doplnění čárky pro správnou syntaxi.
+          </p>
+        </article>
+      </section>
+      <section id="zaver">
+        <article>
+          <header>
+            <h2>Závěr</h2>
+          </header>
+          <p>Práci na tomto projektu jsem si velice užil, a hodně věcí o XML, XSD a XLST se naučil. Věřím že získané zkuženosti určitě použiji v budoucnu jak už v práci či v 
+          nějakých samostatných projektech.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+    <p>Autor: <strong>Lukáš Pechr, xpecl005, sudý 15:45</strong> | Česká Zemědělská univerzita Praha, dne 10.4.2017</p>
+    </footer>
+  </body>
+</html>
