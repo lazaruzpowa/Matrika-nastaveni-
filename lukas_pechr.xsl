@@ -3,7 +3,7 @@
 	<xsl:output method="text"/>
 	<xsl:template match="/">
 		[ 
-		<xsl:for-each select="nastaveni/tiskove-n/kniha-narozeni[@narozeni-c >= 1]"> 
+		<xsl:for-each select="nastaveni/tiskove-n/kniha-narozeni[@narozeni-c >= 2]"> 
 			<xsl:sort select="nazev-knihy" order="descending"/>
 			{
 			"Název Knihy": "<xsl:value-of select="nazev-knihy"/>",
