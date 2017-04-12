@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="lukas_pechr.xsl"?> 
 <nastaveni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="lukas_pechr.xsd">
 	<!--Obecné nastavení -->
-	<obecné-n nazev="Obecné nastavení">
+	<obecne-n nazev="Obecné nastavení">
 		<nazev-modulu>Matrika-SQL/MÚ</nazev-modulu>
 		<obec>Radotín</obec>
 		<okres>Praha 16</okres>
@@ -10,7 +10,7 @@
 		<cislo-AIS>100</cislo-AIS>
 		<ciselnik-EOSQL>0</ciselnik-EOSQL>
 		<vyber-EO>1</vyber-EO>
-	</obecné-n>
+	</obecne-n>
 	<!--Tiskové nastavení -->
 	<tiskove-n nazev="Nastavení tisku">
 		<!--Kniha narození -->
