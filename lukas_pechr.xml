@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lukas_pechr.xsl"?> 
+<nastaveni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="lukas_pechr.xsd">
+	<!--Obecné nastavení -->
+	<obecné-n nazev="Obecné nastavení">
+		<nazev-modulu>Matrika-SQL/MÚ</nazev-modulu>
+		<obec>Radotín</obec>
+		<okres>Praha 16</okres>
+		<statni-obcanstvi>Česká republika</statni-obcanstvi>
+		<cislo-AIS>100</cislo-AIS>
+		<ciselnik-EOSQL>0</ciselnik-EOSQL>
+		<vyber-EO>1</vyber-EO>
+	</obecné-n>
+	<!--Tiskové nastavení -->
+	<tiskove-n nazev="Nastavení tisku">
+		<!--Kniha narození -->
+		<kniha-narozeni narozeni-c="1">
+			<nazev-knihy>Kniha narození IV</nazev-knihy>
+			<pocet-radku>5</pocet-radku>
+			<podpis>PostSignum Public CA 2</podpis>
+			<obdobi>2017</obdobi>
+			<z-proskrtnuti>+</z-proskrtnuti>
+		</kniha-narozeni>
+
+		<kniha-narozeni narozeni-c="2">
+			<nazev-knihy>Kniha narození III</nazev-knihy>
+			<pocet-radku>4</pocet-radku>
+			<podpis>PostSignum Public CA 2</podpis>
+			<obdobi>2016</obdobi>
+			<z-proskrtnuti>+</z-proskrtnuti>
+		</kniha-narozeni>
+
+		<!--Kniha manželství -->
+		<kniha-manzelstvi manzelstvi-c="1">
+			<nazev-knihy>Kniha manželství IV</nazev-knihy>
+			<pocet-radku>5</pocet-radku>
+			<podpis>PostSignum Public CA 2</podpis>
+			<obdobi>2017</obdobi>
+			<z-proskrtnuti>*</z-proskrtnuti>
+		</kniha-manzelstvi>
+
+		<kniha-manzelstvi manzelstvi-c="2">
+			<nazev-knihy>Kniha manželství III</nazev-knihy>
+			<pocet-radku>4</pocet-radku>
+			<podpis>PostSignum Public CA 2</podpis>
+			<obdobi>2016</obdobi>
+			<z-proskrtnuti>*</z-proskrtnuti>
+		</kniha-manzelstvi>
+		<!--Kniha úmrtí -->
+		<kniha-umrti umrti-c="1">
+			<nazev-knihy>Kniha umrtí IV</nazev-knihy>
+			<pocet-radku>5</pocet-radku>
+			<podpis>PostSignum Public CA 2</podpis>
+			<obdobi>2017</obdobi>
+			<z-proskrtnuti>/</z-proskrtnuti>
+		</kniha-umrti>
+
+		<kniha-umrti umrti-c="2">
+			<nazev-knihy>Kniha umrtí III</nazev-knihy>
+			<pocet-radku>4</pocet-radku>
+			<podpis>PostSignum Public CA 2</podpis>
+			<obdobi>2016</obdobi>
+			<z-proskrtnuti>/</z-proskrtnuti>
+		</kniha-umrti>
+	</tiskove-n>
+	<!--Nastavení vyhledávání -->
+	<n-vyhledavani nazev="Nastavení vyhledávání">
+		<filtr>Jan</filtr>
+		<serazeni>Sestupně</serazeni>
+		<pocet-nalezu>15</pocet-nalezu>
+		<barevny-filtr>
+			<umrti>Červená</umrti>
+			<narození>Zelená</narození>
+			<snatek>Modrá</snatek>
+		</barevny-filtr>
+	</n-vyhledavani>
+	<!--Nastavení uživatele-->
+	<n-uzivatele nazev="Nastavení uživatele">
+		<jmeno>Lukáš</jmeno>
+		<prijmeni>Pechr</prijmeni>
+		<pozice>Správce</pozice>
+		<cert>00 a8 ff</cert>
+		<zkratka>LP</zkratka>
+		<urad>MC Praha 16</urad>
+	</n-uzivatele>
+	<!--Nastavení sítě-->
+	<sitove-n nazev="Síťové nastavení">
+		<triada-web spoj="1">
+			<url>http://localhst:0000/</url>
+			<login>admin</login>
+			<ssl>1</ssl>
+		</triada-web>
+		<vazby spoj="2">
+			<spoluprace>
+				<munis>1</munis>
+				<czechpoint>1</czechpoint>
+				<ginis>0</ginis>
+				<vita>1</vita>
+			</spoluprace>
+		</vazby>
+	</sitove-n>
+</nastaveni>

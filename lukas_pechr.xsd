@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!--Nastavení -->
+  <xs:element name="nastaveni">
+    <xs:complexType>
+      <xs:sequence>
+        <!--Obecné nastavení -->
+        <xs:element name="obecné-n">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nazev-modulu"/>
+              <xs:element type="xs:string" name="obec"/>
+              <xs:element type="xs:string" name="okres"/>
+              <xs:element type="xs:string" name="statni-obcanstvi"/>
+              <xs:element type="AIS" name="cislo-AIS"/>
+              <xs:element type="EOSQL" name="ciselnik-EOSQL"/>
+              <xs:element type="EO" name="vyber-EO"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nazev"/>
+          </xs:complexType>
+        </xs:element>
+        <!--Tiskové nastavení -->
+        <xs:element name="tiskove-n">
+          <xs:complexType>
+            <xs:sequence>
+              <!--Kniha narození -->
+              <xs:element name="kniha-narozeni">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nazev-knihy"/>
+                    <xs:element type="xs:integer" name="pocet-radku"/>
+                    <xs:element type="xs:string" name="podpis"/>
+                    <xs:element type="xs:integer" name="obdobi"/>
+                    <xs:element type="znak" name="z-proskrtnuti"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="narozeni-c"/>
+                </xs:complexType>
+              </xs:element>
+              <!--Kniha manželství -->
+              <xs:element name="kniha-manzelstvi">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nazev-knihy"/>
+                    <xs:element type="xs:integer" name="pocet-radku"/>
+                    <xs:element type="xs:string" name="podpis"/>
+                    <xs:element type="xs:integer" name="obdobi"/>
+                    <xs:element type="znak" name="z-proskrtnuti"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="manzelstvi-c"/>
+                </xs:complexType>
+              </xs:element>
+              <!--Kniha manželství -->
+              <xs:element name="kniha-umrti">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nazev-knihy"/>
+                    <xs:element type="xs:integer" name="pocet-radku"/>
+                    <xs:element type="xs:string" name="podpis"/>
+                    <xs:element type="xs:integer" name="obdobi"/>
+                    <xs:element type="znak" name="z-proskrtnuti"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="umrti-c"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nazev"/>
+          </xs:complexType>
+        </xs:element>
+        <!--Nastavení vyhledávání -->
+        <xs:element name="n-vyhledavani">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="filtr"/>
+              <xs:element type="xs:string" name="serazeni"/>
+              <xs:element type="xs:integer" name="pocet-nalezu"/>
+              <xs:element name="barevny-filtr">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="barva" name="umrti"/>
+                    <xs:element type="barva" name="narození"/>
+                    <xs:element type="barva" name="snatek"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nazev"/>
+          </xs:complexType>
+        </xs:element>
+        <!--Nastavení uživatele -->
+        <xs:element name="n-uzivatele">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="jmeno"/>
+              <xs:element type="xs:string" name="prijmeni"/>
+              <xs:element type="xs:string" name="pozice"/>
+              <xs:element type="xs:string" name="cert"/>
+              <xs:element type="xs:string" name="zkratka"/>
+              <xs:element type="xs:string" name="urad"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nazev"/>
+          </xs:complexType>
+        </xs:element>
+        <!--Nastavení sítě -->
+        <xs:element name="sitove-n">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="triada-web">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:anyURI" name="url"/>
+                    <xs:element type="xs:string" name="login"/>
+                    <xs:element type="ssl" name="ssl"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:integer" name="spoj"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="vazby">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="spoluprace">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="munis" name="munis"/>
+                          <xs:element type="czechpoint" name="czechpoint"/>
+                          <xs:element type="ginis" name="ginis"/>
+                          <xs:element type="vita" name="vita"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:integer" name="spoj"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nazev"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+<!-- Proměné-->
+
+	<!--Omezení na čísla 0 a 1 -->
+	<xs:simpleType name="EOSQL">
+		<xs:restriction base="xs:byte">
+			<xs:pattern value="[0-1]"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!--Omezení na čísla 0 a 1 -->
+	<xs:simpleType name="EO">
+		<xs:restriction base="xs:byte">
+			<xs:pattern value="[0-1]"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+  <!-- Nastavení možnosti výběru 0-999 -->
+  <xs:simpleType name="AIS">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Nastavení barevných filtrů-->
+  <xs:simpleType name="barva">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Červená"/>
+      <xs:enumeration value="Modrá"/>
+      <xs:enumeration value="Žlutá"/>
+      <xs:enumeration value="Zelená"/>
+      <xs:enumeration value="Růžová"/>
+      <xs:enumeration value="Fialová"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Nastavení string znaků v nabídce -->
+  <xs:simpleType name="znak">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="*"/>
+      <xs:enumeration value="+"/>
+      <xs:enumeration value="/"/>
+      <xs:enumeration value="^"/>
+      <xs:enumeration value="x"/>
+      <xs:enumeration value="X"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Omezení na čísla 0 a 1 -->
+  <xs:simpleType name="ssl">
+    <xs:restriction base="xs:byte">
+      <xs:pattern value="[0-1]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Omezení na čísla 0 a 1 -->
+  <xs:simpleType name="munis">
+    <xs:restriction base="xs:byte">
+      <xs:pattern value="[0-1]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Omezení na čísla 0 a 1 -->
+  <xs:simpleType name="czechpoint">
+    <xs:restriction base="xs:byte">
+      <xs:pattern value="[0-1]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Omezení na čísla 0 a 1 -->
+  <xs:simpleType name="ginis">
+    <xs:restriction base="xs:byte">
+      <xs:pattern value="[0-1]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Omezení na čísla 0 a 1 -->
+  <xs:simpleType name="vita">
+    <xs:restriction base="xs:byte">
+      <xs:pattern value="[0-1]"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
