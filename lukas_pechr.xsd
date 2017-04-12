@@ -5,7 +5,7 @@
     <xs:complexType>
       <xs:sequence>
         <!--Obecné nastavení -->
-        <xs:element name="obecné-n">
+        <xs:element name="obecne-n">
           <xs:complexType>
             <xs:sequence>
               <xs:element type="xs:string" name="nazev-modulu"/>
