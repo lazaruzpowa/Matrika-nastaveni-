@@ -71,7 +71,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element type="xs:string" name="filtr"/>
-              <xs:element type="xs:string" name="serazeni"/>
+              <xs:element type="serazeni" name="serazeni"/>
               <xs:element type="xs:integer" name="pocet-nalezu"/>
               <xs:element name="barevny-filtr">
                 <xs:complexType>
@@ -184,6 +184,14 @@
       <xs:enumeration value="^"/>
       <xs:enumeration value="x"/>
       <xs:enumeration value="X"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--NAstavení omezení seřazení -->
+  <xs:simpleType name="serazeni">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="vzestupně"/>
+      <xs:enumeration value="sestupně"/>
     </xs:restriction>
   </xs:simpleType>
 
